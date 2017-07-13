@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> babylon - typescript ver </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/2.5.0/babylon.js"></script>
+        <script src="game.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width   : 100%;
+                height  : 100%;
+                margin  : 0;
+                padding : 0;
+            }
+            #container {
+                width   : 100%;
+                height  : 100%;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <canvas id="container"></canvas>
+        <script>
+            var 
+                game;
+
+            window.addEventListener('DOMContentLoaded', function(){
+                game = new Game('container');
+
+                game.createScene();
+                game.render();
+
+                console.log(game);
+                
+            });
+
+        </script>
+    </body>
+</html>
